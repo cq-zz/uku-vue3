@@ -1,22 +1,26 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import MainLayout from './layout/MainLayout.vue';
+import Slider from './components/Slider.vue';
+import Example from './components/Example.vue';
+import Docs from './components/Docs.vue';
 </script>
 
 <template>
-  <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+  <main-layout>
+    <template v-slot:slider>
+      <slider></slider>
+    </template>
+    <template v-slot:docs>
+      <docs></docs>
+    </template>
+    <template v-slot:example>
+      <example></example>
+    </template>
+  </main-layout>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
