@@ -1,32 +1,31 @@
 import { createWebHashHistory, createRouter } from "vue-router";
 
 // 文档
-import docs from '../components/Docs.vue';
-import home from '../../docs/Home.vue';
+import DocsSite from '../components/DocsSite.vue';
+import Home from '../../docs/Home.vue';
 
 // 示例
-import example from '../components/Example.vue';
-import button from '../../examples/Button.vue';
+import Button from '../../examples/Button.vue';
 
 const routes = [
-    { path: '/', redirect: { name: 'docs' } },
+    { path: '/', redirect: { name: 'uku' } },
     {
-        path: '/docs',
-        name: 'docs',
-        component: docs,
+        path: '/uku/docs',
+        name: 'uku',
+        component: DocsSite,
         redirect: { name: 'home' },
         children: [
-            { path: 'home', name: 'home', component: home }
+            { path: 'home', name: 'home',  component: Home }
         ]
     },
     {
-        path: '/example',
-        component: example,
-        redirect: { name: 'button' },
+        path: '/uku/example',
+        name: 'example',
+        redirect: 'button',
         children: [
-            { path: 'button', name: 'button', component: button },
+            { path: 'button', name: 'button', component: Button }
         ]
-    },
+    }
 ]
 
 const history = createWebHashHistory();
