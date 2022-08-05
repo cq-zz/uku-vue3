@@ -8,7 +8,7 @@
             <img src="../assets/uku.png" alt="logo" />
             <b>Unknown UI <span>（适用于vue3）</span></b>
         </div>
-        <a class="github-link-a" href="https://github.com/cq-zz/uku-vue3">
+        <a class="github-link-a" href="https://github.com/cq-zz/uku-vue3" target="_blank">
             <img src="../assets/github.svg" alt="github" />
         </a>
     </div>

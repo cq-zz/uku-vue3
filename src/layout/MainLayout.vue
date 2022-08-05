@@ -8,7 +8,7 @@ import HeaderContent from '../components/HeaderContent.vue';
 <template>
     <div class="main-layout-div">
         <div class="header-div">
-            <header-content></header-content>
+            <header-content />
         </div>
         <div class="content-container-div">
             <div class="slide-div">

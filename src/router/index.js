@@ -2,9 +2,11 @@ import { createWebHashHistory, createRouter } from "vue-router";
 
 // 文档
 import DocsSite from '../components/DocsSite.vue';
-import Home from '../../docs/Home.vue';
+import DocsHome from '../../docs/Home.vue';
 
 // 示例
+import ExampleHome from '../../examples/Home.vue';
+import ExampleMain from '../../examples/Main.vue';
 import Button from '../../examples/Button.vue';
 
 const routes = [
@@ -15,15 +17,24 @@ const routes = [
         component: DocsSite,
         redirect: { name: 'home' },
         children: [
-            { path: 'home', name: 'home',  component: Home }
+            { path: 'home', name: 'home', component: DocsHome }
         ]
     },
     {
         path: '/uku/example',
         name: 'example',
-        redirect: 'button',
+        redirect: { name: 'dashboard' },
         children: [
-            { path: 'button', name: 'button', component: Button }
+            { path: 'dashboard', name: 'dashboard', component: ExampleHome },
+            {
+                path: 'components',
+                name: 'components',
+                component: ExampleMain,
+                redirect: { name: 'button' },
+                children: [
+                    { path: 'button', name: 'button', component: Button }
+                ]
+            },
         ]
     }
 ]
@@ -39,8 +50,8 @@ router.beforeEach((to, from, next) => {
     next();
 })
 
-router.afterEach((to,from,next) => {
-    window.scrollTo(0,0);
+router.afterEach((to, from, next) => {
+    window.scrollTo(0, 0);
 })
 
 export default router;

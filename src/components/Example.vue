@@ -4,14 +4,14 @@
 
 <template>
     <div class="example-container-div">
-        <iframe src="http://127.0.0.1:8080/#/uku/example/button" />
+        <iframe src="http://127.0.0.1:8080/#/uku/example/dashboard" />
     </div>
 </template>
 
 <style lang="less" scoped>
 .example-container-div {
     position: fixed;
-    top: 80px;
+    top: 84px;
     width: 375px;
     height: 667px;
     padding: 15px;
