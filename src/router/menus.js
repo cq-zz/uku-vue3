@@ -3,7 +3,7 @@ const MenusPC = [
     title: "开发指南",
     children: [
       { name: "介绍", path: "/uku/docs/home" },
-      { name: "快速上手", path: "/uku/docs/home" },
+      { name: "快速上手", path: "/uku/docs/start" },
     ],
   },
   {

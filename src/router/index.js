@@ -2,7 +2,8 @@ import { createWebHashHistory, createRouter } from "vue-router";
 
 // 文档
 import DocsSite from "../components/DocsSite.vue";
-import DocsHome from "../../docs/Home.vue";
+import DocsHome from "../../docs/Home.md";
+import QuickStart from "../../docs/QuickStart.md";
 
 // 示例
 import ExampleHome from "../../examples/Home.vue";
@@ -16,7 +17,10 @@ const routes = [
     name: "uku",
     component: DocsSite,
     redirect: { name: "home" },
-    children: [{ path: "home", name: "home", meta: { name: "文档首页" }, component: DocsHome }],
+    children: [
+      { path: "home", name: "home", component: DocsHome },
+      { path: "start", meta: { name: "快速开始" }, component: QuickStart },
+    ],
   },
   {
     path: "/uku/example",
