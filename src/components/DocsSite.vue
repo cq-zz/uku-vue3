@@ -1,21 +1,20 @@
 <script setup>
-import MainLayout from '../layout/MainLayout.vue';
-import Slider from './Slider.vue';
-import Docs from './Docs.vue';
-import Example from './Example.vue';
-
+import MainLayout from "../layout/MainLayout.vue";
+import SliderMenu from "./SliderMenu.vue";
+import DocsPage from "./DocsPage.vue";
+import ExamplePage from "./ExamplePage.vue";
 </script>
 
 <template>
-    <main-layout>
-        <template v-slot:slider>
-            <slider></slider>
-        </template>
-        <template v-slot:docs>
-            <docs></docs>
-        </template>
-        <template v-slot:example>
-            <example></example>
-        </template>
-    </main-layout>
+  <main-layout>
+    <template v-slot:slider>
+      <slider-menu></slider-menu>
+    </template>
+    <template v-slot:docs>
+      <docs-page></docs-page>
+    </template>
+    <template v-slot:example>
+      <example-page></example-page>
+    </template>
+  </main-layout>
 </template>

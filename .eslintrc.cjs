@@ -16,5 +16,6 @@ module.exports = {
     "no-console": "warn",
     "no-debugger": "warn",
     "no-alert": "warn",
+    "vue/multi-word-component-names": "off",
   },
 };

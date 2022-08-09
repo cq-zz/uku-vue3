@@ -1,73 +1,78 @@
 <script>
 export default {
-    name: "UkuButton",
-    props: {
-        // 类型 primary success warn error
-        type: {
-            type: String,
-            default: "",
-        },
-        // 大小 small normal large
-        size: {
-            type: String,
-            default: "normal",
-        },
-        // 无背景色
-        plain: {
-            type: Boolean,
-            default: false
-        },
-        // 禁用
-        disabled: {
-            type: Boolean,
-            default: false
-        },
-        // 自定义颜色
-        color: {
-            type: String,
-            default: ''
-        },
-        // 块级
-        block: {
-            type: Boolean,
-            default: false
-        }
+  name: "UkuButton",
+  props: {
+    // 类型 primary success warn error
+    type: {
+      type: String,
+      default: "",
     },
-    computed: {
-        styleObject() {
-            let ukuBtnStyleObj = {}
-            if (this.color) {
-                if (this.plain) {
-                    ukuBtnStyleObj = {
-                        color: this.color,
-                        borderColor: this.color,
-                    }
-                } else {
-                    ukuBtnStyleObj = {
-                        backgroundColor: this.color,
-                        color: "#fff",
-                        border: "none",
-                    }
-                }
-            }
-            return ukuBtnStyleObj;
+    // 大小 small normal large
+    size: {
+      type: String,
+      default: "normal",
+    },
+    // 无背景色
+    plain: {
+      type: Boolean,
+      default: false,
+    },
+    // 禁用
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    // 自定义颜色
+    color: {
+      type: String,
+      default: "",
+    },
+    // 块级
+    block: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    styleObject() {
+      let ukuBtnStyleObj = {};
+      if (this.color) {
+        if (this.plain) {
+          ukuBtnStyleObj = {
+            color: this.color,
+            borderColor: this.color,
+          };
+        } else {
+          ukuBtnStyleObj = {
+            backgroundColor: this.color,
+            color: "#fff",
+            border: "none",
+          };
         }
-    }
-}
+      }
+      return ukuBtnStyleObj;
+    },
+  },
+};
 </script>
 
 <template>
-    <button class="uku-btn" :disabled="disabled" :class="[
-        'uku' + (type ? '-' + type : '') + (plain ? '-plain' : '') + '-btn',
-        'uku-' + size + '-btn',
-        { 'uku-disabled-btn': disabled }
-    ]" :style="[styleObject, { width: block ? '100%' : 'auto' }]" @click="$emit('click')">
-        <slot></slot>
-    </button>
+  <button
+    class="uku-btn"
+    :disabled="disabled"
+    :class="[
+      'uku' + (type ? '-' + type : '') + (plain ? '-plain' : '') + '-btn',
+      'uku-' + size + '-btn',
+      { 'uku-disabled-btn': disabled },
+    ]"
+    :style="[styleObject, { width: block ? '100%' : 'auto' }]"
+    @click="$emit('click')">
+    <slot></slot>
+  </button>
 </template>
 
 <style lang="less" scoped>
-@import '../styles/var.less';
+@import "../styles/var.less";
 
 @uku-btn-primary-color: @blue;
 @uku-btn-success-color: @green;
@@ -88,76 +93,76 @@ export default {
 @uku-btn-border: @gray-4;
 
 .uku-btn {
-    background-color: #fff;
-    box-sizing: border-box;
-    border: 1px solid @uku-btn-border;
-    border-radius: 2px;
-    font-size: @uku-btn-md-font-size;
-    color: @uku-btn-default-font-color;
-    cursor: pointer;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid @uku-btn-border;
+  border-radius: 2px;
+  font-size: @uku-btn-md-font-size;
+  color: @uku-btn-default-font-color;
+  cursor: pointer;
 }
 
 .uku-primary-btn {
-    background-color: @uku-btn-primary-color;
-    color: @uku-btn-white-font-color;
-    border: 0;
+  background-color: @uku-btn-primary-color;
+  color: @uku-btn-white-font-color;
+  border: 0;
 }
 
 .uku-success-btn {
-    background-color: @uku-btn-success-color;
-    color: @uku-btn-white-font-color;
-    border: 0;
+  background-color: @uku-btn-success-color;
+  color: @uku-btn-white-font-color;
+  border: 0;
 }
 
 .uku-warn-btn {
-    background-color: @uku-btn-warn-color;
-    color: @uku-btn-white-font-color;
-    border: 0;
+  background-color: @uku-btn-warn-color;
+  color: @uku-btn-white-font-color;
+  border: 0;
 }
 
 .uku-error-btn {
-    background-color: @uku-btn-error-color;
-    color: @uku-btn-white-font-color;
-    border: 0;
+  background-color: @uku-btn-error-color;
+  color: @uku-btn-white-font-color;
+  border: 0;
 }
 
 .uku-primary-plain-btn {
-    border: 1px solid @uku-btn-primary-color;
-    color: @uku-btn-primary-color;
+  border: 1px solid @uku-btn-primary-color;
+  color: @uku-btn-primary-color;
 }
 
 .uku-success-plain-btn {
-    border: 1px solid @uku-btn-success-color;
-    color: @uku-btn-success-color;
+  border: 1px solid @uku-btn-success-color;
+  color: @uku-btn-success-color;
 }
 
 .uku-warn-plain-btn {
-    border: 1px solid @uku-btn-warn-color;
-    color: @uku-btn-warn-color;
+  border: 1px solid @uku-btn-warn-color;
+  color: @uku-btn-warn-color;
 }
 
 .uku-error-plain-btn {
-    border: 1px solid @uku-btn-error-color;
-    color: @uku-btn-error-color;
+  border: 1px solid @uku-btn-error-color;
+  color: @uku-btn-error-color;
 }
 
 .uku-small-btn {
-    padding: @uku-btn-sm-padding;
-    font-size: @uku-btn-sm-font-size;
+  padding: @uku-btn-sm-padding;
+  font-size: @uku-btn-sm-font-size;
 }
 
 .uku-normal-btn {
-    padding: @uku-btn-md-padding;
-    font-size: @uku-btn-md-font-size;
+  padding: @uku-btn-md-padding;
+  font-size: @uku-btn-md-font-size;
 }
 
 .uku-large-btn {
-    padding: @uku-btn-lg-padding;
-    font-size: @uku-btn-lg-font-size;
+  padding: @uku-btn-lg-padding;
+  font-size: @uku-btn-lg-font-size;
 }
 
 .uku-disabled-btn {
-    opacity: .5;
-    cursor: no-drop;
+  opacity: 0.5;
+  cursor: no-drop;
 }
 </style>
