@@ -7,7 +7,7 @@ export default {
   <div class="introdude-div">
     <img src="./images/uku.png" alt="logo" />
     <span>Unknown UI</span>
-    <p>适用于vue3</p>
+    <p>适用于vue</p>
   </div>
   <div class="components-menu-div">
     <router-link to="components/button">

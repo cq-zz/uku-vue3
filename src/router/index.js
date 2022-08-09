@@ -4,6 +4,8 @@ import { createWebHashHistory, createRouter } from "vue-router";
 import DocsSite from "../components/DocsSite.vue";
 import DocsHome from "../../docs/Home.md";
 import QuickStart from "../../docs/QuickStart.md";
+import ButtonDocs from "../../docs/Button.md";
+import ImageDocs from "../../docs/Image.md";
 
 // 示例
 import ExampleHome from "../../examples/Home.vue";
@@ -19,7 +21,9 @@ const routes = [
     redirect: { name: "home" },
     children: [
       { path: "home", name: "home", component: DocsHome },
-      { path: "start", meta: { name: "快速开始" }, component: QuickStart },
+      { path: "start", meta: { name: "快速上手" }, component: QuickStart },
+      { path: "Button", meta: { name: "Button 按钮" }, component: ButtonDocs },
+      { path: "Image", meta: { name: "Image 图片" }, component: ImageDocs },
     ],
   },
   {
@@ -52,8 +56,8 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-// router.afterEach((to, from, next) => {
-//   window.scrollTo(0, 0);
-// });
+router.afterEach(() => {
+  window.scrollTo(0, 0);
+});
 
 export default router;
