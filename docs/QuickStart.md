@@ -37,7 +37,6 @@ import Uku from 'Uku';
 
 const app = createApp();
 app.use(Uku);
-
 ```
 
 </div>
