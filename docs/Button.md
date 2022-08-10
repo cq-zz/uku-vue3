@@ -18,7 +18,6 @@ import { Button } from 'Uku';
 
 const app = createApp();
 app.use(Button);
-
 ```
 </div>
 

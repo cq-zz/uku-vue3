@@ -1,12 +1,12 @@
 <script setup>
-import { watch, ref } from "vue";
+import { watchEffect, ref } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 
 const componentName = ref("");
 
-watch(() => {
+watchEffect(() => {
   componentName.value = route.path.substring(route.path.lastIndexOf("/") + 1);
 });
 </script>

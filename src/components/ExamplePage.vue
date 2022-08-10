@@ -1,5 +1,5 @@
 <script setup>
-import { watch, ref } from "vue";
+import { watchEffect, ref } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
@@ -8,7 +8,7 @@ const baseUrl = "http://127.0.0.1:8080/#/uku/example/";
 
 const iframeUrl = ref("dashboard");
 
-watch(() => {
+watchEffect(() => {
   if (route.path.indexOf("component") > -1) {
     iframeUrl.value = "components/" + route.path.substring(route.path.lastIndexOf("/") + 1);
   } else {
