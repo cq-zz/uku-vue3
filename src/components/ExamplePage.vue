@@ -1,12 +1,25 @@
 <script setup>
-import { ref } from "vue";
+import { watch, ref } from "vue";
+import { useRoute } from "vue-router";
 
-const iframeUrl = ref("http://127.0.0.1:8080/#/uku/example/dashboard");
+const route = useRoute();
+
+const baseUrl = "http://127.0.0.1:8080/#/uku/example/";
+
+const iframeUrl = ref("dashboard");
+
+watch(() => {
+  if (route.path.indexOf("component") > -1) {
+    iframeUrl.value = "components/" + route.path.substring(route.path.lastIndexOf("/") + 1);
+  } else {
+    iframeUrl.value = "dashboard";
+  }
+});
 </script>
 
 <template>
   <div class="example-container-div">
-    <iframe :src="iframeUrl" />
+    <iframe :src="baseUrl + iframeUrl" />
   </div>
 </template>
 

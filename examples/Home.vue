@@ -1,7 +1,10 @@
-<script>
-export default {
-  setup() {},
-};
+<script setup>
+import { ref } from "vue";
+
+const menus = ref([
+  { cn: "按钮", en: "Button", path: "components/button" },
+  { cn: "图片", en: "Image", path: "components/image" },
+]);
 </script>
 <template>
   <div class="introdude-div">
@@ -10,8 +13,8 @@ export default {
     <p>适用于vue</p>
   </div>
   <div class="components-menu-div">
-    <router-link to="components/button">
-      <span>Button 按钮</span>
+    <router-link v-for="(menu, index) in menus" :to="menu.path" v-bind:key="'menu-' + index">
+      <span>{{ menu.en }} {{ menu.cn }}</span>
       <span> > </span>
     </router-link>
   </div>
@@ -38,21 +41,20 @@ export default {
   }
 }
 
-.example-header-div {
-  height: 40px;
-
+.components-menu-div {
   > a {
-    width: 100%;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     margin: 0 0 12px;
-    padding-left: 20px;
+    padding: 0 20px;
     color: #323233;
     font-weight: 600;
     font-size: 14px;
     line-height: 40px;
     background: #f7f8fa;
     border-radius: 99px;
+    text-decoration: none;
   }
 }
 </style>
