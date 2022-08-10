@@ -1,9 +1,15 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watchEffect } from "vue";
+import { useRoute } from "vue-router";
 import MenusPC from "../router/menus";
 
+const route = useRoute();
 const Menus = ref(MenusPC);
-const CurItem = ref("介绍");
+const CurPath = ref("");
+
+watchEffect(() => {
+  CurPath.value = route.path;
+});
 </script>
 
 <template>
@@ -16,7 +22,7 @@ const CurItem = ref("介绍");
             v-for="(item, index) in parentItem?.children"
             v-bind:key="parentItem.title + 'menu-' + index"
             :to="item.path">
-            <li @click="CurItem = item.name" class="menu-li" :class="{ 'active-menu': CurItem === item.name }">
+            <li class="menu-li" :class="{ 'active-menu': CurPath === item.path }">
               {{ item.name }}
             </li>
           </router-link>

@@ -39,8 +39,8 @@ const routes = [
         component: ExampleMain,
         redirect: { name: "button" },
         children: [
-          { path: "button", name: "button", component: Button },
-          { path: "image", name: "image", component: Image },
+          { path: "Button", name: "button", component: Button },
+          { path: "Image", name: "image", component: Image },
         ],
       },
     ],

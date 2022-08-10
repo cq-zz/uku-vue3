@@ -2,9 +2,13 @@
 import { ref } from "vue";
 
 const menus = ref([
-  { cn: "按钮", en: "Button", path: "components/button" },
-  { cn: "图片", en: "Image", path: "components/image" },
+  { cn: "按钮", en: "Button", path: "components/Button" },
+  { cn: "图片", en: "Image", path: "components/Image" },
 ]);
+
+const goRoute = item => {
+  window.parent.goRouter(item);
+};
 </script>
 <template>
   <div class="introdude-div">
@@ -13,7 +17,11 @@ const menus = ref([
     <p>适用于vue</p>
   </div>
   <div class="components-menu-div">
-    <router-link v-for="(menu, index) in menus" :to="menu.path" v-bind:key="'menu-' + index">
+    <router-link
+      v-for="(menu, index) in menus"
+      :to="menu.path"
+      v-bind:key="'menu-' + index"
+      @click="goRoute(menu.path)">
       <span>{{ menu.en }} {{ menu.cn }}</span>
       <span> > </span>
     </router-link>
