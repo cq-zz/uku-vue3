@@ -12,19 +12,19 @@ function markdownHighlight(str, lang) {
 }
 
 function markdownCardWrapper(htmlCode) {
-  const group = htmlCode.replace(/<h3/g, ":::<h3").replace(/<h2/g, ":::<h2").split(":::");
-  const content = group
+  const group = htmlCode
+    .replace(/<h3/g, ":::<h3")
+    .replace(/<h2/g, ":::<h2")
+    .replace(/<\/template>/g, ":::</template>")
+    .split(":::");
+  return group
     .map(fragment => {
-      if (fragment.indexOf("</template>") > -1) {
-        fragment = fragment.replace("</template>", "");
-      }
       if (fragment.indexOf("<h3") !== -1) {
         return `<div class="uku-doc-card">${fragment}</div>`;
       }
       return fragment;
     })
     .join("");
-  return `${content}</template>`;
 }
 
 // https://vitejs.dev/config/
