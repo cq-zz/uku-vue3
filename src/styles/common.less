@@ -1,4 +1,6 @@
-.markdown-body {
+@import 'highlight.js/styles/github.css';
+
+.uku-doc-markdown-body {
 
     >h1,
     h2 {
@@ -6,11 +8,11 @@
     }
 
     .uku-doc-card {
-        margin-bottom: 30px;
+        margin-bottom: 24px;
         padding: 24px;
         background-color: #fff;
         border-radius: 20px;
-        color: #58727e;
+        box-shadow: 0 8px 12px #ebedf0;
 
         .uku-doc-intro {
             display: flex;
@@ -23,63 +25,213 @@
             }
 
             >p {
-                margin: 20px 0 0;
                 padding: 0;
             }
         }
 
-        >h3 {
-            margin-bottom: 20px;
-        }
-
-        >p {
-            margin-bottom: 15px;
-
-            &:nth-last-child(1) {
-                margin-bottom: 0;
-            }
-        }
+        
 
         >pre {
-            display: block;
-            margin-bottom: 20px;
+            margin: 20px 0 0;
 
-            >code {
+            code {
+                position: relative;
                 display: block;
                 padding: 16px 20px;
+                overflow-x: auto;
+                color: #58727e;
+                font-weight: 400;
+                font-size: 14px;
+                font-family: Source Code Pro,Monaco,Inconsolata,monospace;
+                line-height: 26px;
                 white-space: pre-wrap;
                 word-wrap: break-word;
                 -webkit-font-smoothing: auto;
-                color: #58727e;
                 background-color: #f8f8f8;
                 border-radius: 20px;
-                font-weight: 400;
-                font-size: 14px;
-                font-family: Source Code Pro, Monaco, Inconsolata, monospace;
-                line-height: 26px;
-                overflow-x: auto;
+            }
+        }
+
+        >p a,
+        >ul a,
+        >table a,
+        >blockquote a {
+            margin: 0 1px;
+            color: #0570db;
+            -webkit-font-smoothing: auto;
+            text-decoration: none;
+
+            &:hover {
+                color: darken(#0570db, 10%);
             }
 
-            &:nth-last-child(1) {
-                margin-bottom: 0;
+            &:active {
+                color: darken(#0570db, 20%);
+            }
+        }
+
+        >h3,
+        >h4,
+        >h5,
+        >h6 {
+            color: #000;
+            font-weight: normal;
+            line-height: 1.6;
+
+            &[id] {
+                cursor: pointer;
+            }
+        }
+
+        >h3 {
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        >h4 {
+            margin: 24px 0 12px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        >h5 {
+            margin: 24px 0 12px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        >p {
+            margin-top: 8px;
+        }
+
+        >p,
+        >blockquote p {
+            color: #58727e;
+            font-size: 15px;
+            line-height: 26px;
+
+            strong {
+                color: black;
             }
         }
 
         >table {
             width: 100%;
-            border-collapse:collapse;
-            >thead,
-            tbody {
-                >tr {
-                    border-bottom: 1px solid #f1f4f8;
+            margin-top: 12px;
+            color: #58727e;
+            font-size: 14px;
+            line-height: 1.5;
+            border-collapse: collapse;
 
-                    >th,
-                    td {
-                        padding: 10px 20px;
-                        text-align: left;
-                    }
+            th {
+                padding: 8px 10px;
+                font-weight: 600;
+                text-align: left;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
                 }
             }
+
+            td {
+                padding: 8px;
+                border-top: 1px solid #f1f4f8;
+
+                &:first-child {
+                    padding-left: 0;
+
+                    // version tag
+                    code {
+                        margin: 0;
+                        padding: 2px 6px;
+                        color: #0570db;
+                        font-weight: 600;
+                        font-size: 11px;
+                        background-color: fade(#0570db, 10%);
+                        border-radius: 20px;
+                    }
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+
+            em {
+                display: inline-block;
+                color: green;
+                font-size: 14px;
+                font-style: normal;
+                max-width: 300px;
+                -webkit-font-smoothing: auto;
+            }
+        }
+
+        >ul {
+            margin: 12px 0;
+        }
+
+        >ul li,
+        >ol li {
+            position: relative;
+            margin: 5px 0 5px 10px;
+            padding-left: 15px;
+            color: #58727e;
+            font-size: 15px;
+            line-height: 26px;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                box-sizing: border-box;
+                width: 6px;
+                height: 6px;
+                margin-top: 10px;
+                border: 1px solid grey;
+                border-radius: 50%;
+                content: '';
+            }
+        }
+
+        >hr {
+            margin: 30px 0;
+            border: 0 none;
+            border-top: 1px solid #eee;
+        }
+
+        >p code,
+        >ul code,
+        >ol code,
+        >table code {
+            display: inline;
+            margin: 0 2px;
+            padding: 2px 5px;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: 600;
+            word-break: keep-all;
+            border-radius: 4px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        >blockquote {
+            margin: 16px 0 0;
+            padding: 16px;
+            background-color: #ecf9ff;
+            border-radius: 20px;
+        }
+
+        >img,
+        >p img {
+            width: 100%;
+            margin: 16px 0;
+            border-radius: 20px;
         }
     }
 }

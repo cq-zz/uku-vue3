@@ -6,13 +6,8 @@
   </div>
 </div>
 
-
-<div class="uku-doc-card">
-
 ### 介绍
 
 Uku 一个在不断完善的vue组件库。
 
 项目地址 [Uku](https://github.com/cq-zz/uku-vue3)
-
-</div>
