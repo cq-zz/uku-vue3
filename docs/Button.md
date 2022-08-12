@@ -1,6 +1,5 @@
 # Button 按钮
 
-
 ### 介绍
 
 按钮用于触发一个点击事件
@@ -80,13 +79,12 @@ app.use(Button);
 
 ## API
 
-
 ### Props
 
-| 参数 |             说明            |                类型                |         默认值       |  
-| ---- |             ----            |              ------               |        -------      | 
-| type | 类型，可选值为 `primary` `success` `warning` `danger` |  _string_            |     default        |
-| size | 尺寸，可选值为 `large` `small`   |  _string_ | normal |
+| 参数 | 说明 |  类型 |  默认值  |  
+| ---- |  ----   |  ------ |  -------  | 
+| type | 类型，可选值为 `primary` `success` `warning` `danger` |  _string_  |  default |
+| size | 尺寸，可选值为 `large` `small` |  _string_ | normal |
 | color| 按钮颜色 | _string_ | - |
 | block|  是否为块级元素 | _boolean_ | false |
 | plain| 是否为朴素按钮 | _boolean_ | false |
@@ -95,14 +93,13 @@ app.use(Button);
 
 ### Events
 
-| 事件名 |             说明            |                回调参数                |
+| 事件名 |  说明 | 回调参数 |
 | --- | --- | --- |
 | click | 点击按钮，且按钮状态不为加载或禁用时触发 | event: MouseEvent |
-|touchstart | 开始触摸按钮时触发 | event: TouchEvent |
 
 
 ### Slots
 
-| 名称 |             说明            |
+| 名称 | 说明 |
 | --- | --- |
 |default| 按钮内容 |

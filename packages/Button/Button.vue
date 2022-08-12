@@ -1,5 +1,6 @@
 <script>
-export default {
+import { defineComponent, computed } from "vue";
+export default defineComponent({
   name: "UkuButton",
   props: {
     // 类型 primary success warn error
@@ -33,27 +34,31 @@ export default {
       default: false,
     },
   },
-  computed: {
-    styleObject() {
-      let ukuBtnStyleObj = {};
-      if (this.color) {
-        if (this.plain) {
-          ukuBtnStyleObj = {
-            color: this.color,
-            borderColor: this.color,
+  setup(props) {
+    const styleUkuBtn = computed(() => {
+      let style = {};
+      if (props.color) {
+        if (props.plain) {
+          style = {
+            color: props.color,
+            borderColor: props.color,
           };
         } else {
-          ukuBtnStyleObj = {
-            backgroundColor: this.color,
+          style = {
+            backgroundColor: props.color,
             color: "#fff",
             border: "none",
           };
         }
       }
-      return ukuBtnStyleObj;
-    },
+      return style;
+    });
+
+    return {
+      styleUkuBtn,
+    };
   },
-};
+});
 </script>
 
 <template>
@@ -65,7 +70,7 @@ export default {
       'uku-' + size + '-btn',
       { 'uku-disabled-btn': disabled },
     ]"
-    :style="[styleObject, { width: block ? '100%' : 'auto' }]"
+    :style="[styleUkuBtn, { width: block ? '100%' : 'auto' }]"
     @click="$emit('click')">
     <slot></slot>
   </button>
