@@ -1,10 +1,10 @@
-<div class="uku-doc-card">
-  <div class="uku-doc-intro">
-    <img src="/uku.png">
-    <h2>Unknown UI</h2>
-    <p>一个 Vue 组件库</p>
-  </div>
-</div>
+<p align="center">
+    <img alt="logo" src="/public/uku.png" style="margin-bottom: 10px;">
+</p>
+
+<h1 align="center">Unknown UI</h1>
+
+<p align="center">一个 Vue 组件库</p>
 
 ### 介绍
 
