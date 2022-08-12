@@ -56,6 +56,8 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   if (to.meta.name) {
     document.title = to.meta.name;
+  } else {
+    document.title = "uku-vue3移动端组件库";
   }
   next();
 });
