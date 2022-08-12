@@ -2,7 +2,7 @@
   <div class="uku-doc-intro">
     <img src="../src/assets/uku.png">
     <h2>Unknown UI</h2>
-    <p>一个 Vue 组件库</p>
+    <p>一套 Vue 组件库</p>
   </div>
 </div>
 

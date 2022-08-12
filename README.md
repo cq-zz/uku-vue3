@@ -2,9 +2,10 @@
     <img alt="logo" src="/public/uku.png" style="margin-bottom: 10px;">
 </p>
 
-<h1 align="center">Unknown UI</h1>
-
-<p align="center">一个 Vue 组件库</p>
+<h1 align="center">
+  Unknown UI
+  <p align="center" style="font-weight: normal">一套 Vue 组件库</p>
+</h1>
 
 ### 介绍
 
