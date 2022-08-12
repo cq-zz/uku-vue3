@@ -4,7 +4,7 @@
 
 <h1 align="center">
   Unknown UI
-  <p align="center" style="margin-top: 16px; font-weight: normal; font-size: 16px; color: #40485b">( 一套 Vue 组件库 )</p>
+  <span style="margin-top: 16px; font-weight: normal; font-size: 16px; color: #40485b;">( 一套 Vue 组件库 )</span>
 </h1>
 
 ### 介绍
