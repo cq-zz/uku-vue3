@@ -2,10 +2,7 @@
     <img alt="logo" src="/public/uku.png" style="margin-bottom: 10px;">
 </p>
 
-<h1 align="center">
-  Unknown UI
-  <span style="margin-top: 16px; font-weight: normal; font-size: 16px; color: #40485b;">( 一套 Vue 组件库 )</span>
-</h1>
+<h1 align="center">Unknown UI</h1>
 
 ### 介绍
 
