@@ -11,7 +11,8 @@
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "highlight.js": "^11.6.0",

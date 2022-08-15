@@ -48,7 +48,7 @@ export default defineConfig(({ mode }) => {
     alias: {
       "/@/": path.resolve(__dirname, "src"),
     },
-    base: "/",
+    base: "/uku-vue3/",
     server: {
       open: true,
       host: "0.0.0.0",
