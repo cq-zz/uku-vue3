@@ -1,0 +1,23 @@
+{
+  "name": "uku-vue3",
+  "version": "1.0.0",
+  "private": false,
+  "description": "vue3 移动端组件库",
+  "files": ["dist"],
+  "main": "./dist/uku-vue3.umd.cjs",
+  "module": "./dist/uku-vue3.js",
+  "exports": {
+    "./index.css": "./dist/style.css",
+    ".": {
+      "import": "./dist/uku-vue3.js",
+      "require": "./dist/uku-vue3.umd.cjs"
+    }
+  },
+  "keywords": [
+    "vue",
+    "ui",
+    "mobile"
+  ],
+  "author": "cq-zz 2583983764@qq.com",
+  "license": "MIT"
+}
