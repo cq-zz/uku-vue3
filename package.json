@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
+    "lib": "vite build --mode lib",
     "build": "vite build",
     "preview": "vite preview",
     "format:check": "prettier --check .",
