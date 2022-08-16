@@ -107,28 +107,34 @@ export default defineComponent({
   cursor: pointer;
 }
 
+.uku-btn:focus,
+.uku-btn:active:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .uku-primary-btn {
   background-color: @uku-btn-primary-color;
   color: @uku-btn-white-font-color;
-  border: 0;
+  border: 1px solid @uku-btn-primary-color;
 }
 
 .uku-success-btn {
   background-color: @uku-btn-success-color;
   color: @uku-btn-white-font-color;
-  border: 0;
+  border: 1px solid @uku-btn-success-color;
 }
 
 .uku-warn-btn {
   background-color: @uku-btn-warn-color;
   color: @uku-btn-white-font-color;
-  border: 0;
+  border: 1px solid @uku-btn-warn-color;
 }
 
 .uku-error-btn {
   background-color: @uku-btn-error-color;
   color: @uku-btn-white-font-color;
-  border: 0;
+  border: 1px solid @uku-btn-error-color;
 }
 
 .uku-primary-plain-btn {
