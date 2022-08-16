@@ -6,25 +6,23 @@
 
 ### 介绍
 
-Uku 一个在不断完善的vue组件库。
+uku-vue3 一个在不断完善的vue组件库。
 
-项目地址 [Uku](https://github.com/cq-zz/uku-vue3)
+文档地址 [uku-vue3](https://cq-zz.github.io/uku-vue3)
 
 ### 安装
 
 ```bash
 # 通过 npm 安装
-npm i Uku
-
-# 通过 yarn 安装
-yarn add Uku
+npm i uku-vue3
 ```
 
 ### 引入组件
 
 ```javascript
 import { createApp } from 'vue';
-import Uku from 'Uku';
+import Uku from 'uku-vue3';
+import "uku-vue3/index.css";
 
 const app = createApp();
 app.use(Uku);

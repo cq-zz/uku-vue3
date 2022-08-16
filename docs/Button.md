@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Button } from 'Uku';
+import { Button } from 'uku-vue3';
 
 const app = createApp();
 app.use(Button);

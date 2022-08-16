@@ -8,17 +8,15 @@
 
 ```bash
 # 通过 npm 安装
-npm i Uku
-
-# 通过 yarn 安装
-yarn add Uku
+npm i uku-vue3
 ```
 
 ### 引入组件
 
 ```javascript
 import { createApp } from 'vue';
-import Uku from 'Uku';
+import Uku from 'uku-vue3';
+import "uku-vue3/index.css";
 
 const app = createApp();
 app.use(Uku);

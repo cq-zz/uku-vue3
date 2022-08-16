@@ -8,7 +8,7 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { Image } from 'Uku';
+import { Image } from 'uku-vue3';
 
 const app = createApp();
 app.use(Image);
