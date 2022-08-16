@@ -4,7 +4,7 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 
-const baseUrl = import.meta.env.VITE_APP_URL + "uku/example/";
+const baseUrl = import.meta.env.VITE_APP_URL + "example/";
 
 const iframeUrl = ref("dashboard");
 

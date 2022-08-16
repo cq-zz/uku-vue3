@@ -14,21 +14,21 @@ import Button from "../../examples/Button.vue";
 import Image from "../../examples/Image.vue";
 
 const routes = [
-  { path: "/", redirect: { name: "uku" } },
+  { path: "/", redirect: { name: "docs" } },
   {
-    path: "/uku/docs",
-    name: "uku",
+    path: "/docs",
+    name: "docs",
     component: DocsSite,
     redirect: { name: "home" },
     children: [
       { path: "home", name: "home", component: DocsHome },
       { path: "start", meta: { name: "快速上手" }, component: QuickStart },
-      { path: "component/Button", meta: { name: "Button 按钮" }, component: ButtonDocs },
-      { path: "component/Image", meta: { name: "Image 图片" }, component: ImageDocs },
+      { path: "components/Button", meta: { name: "Button 按钮" }, component: ButtonDocs },
+      { path: "components/Image", meta: { name: "Image 图片" }, component: ImageDocs },
     ],
   },
   {
-    path: "/uku/example",
+    path: "/example",
     name: "example",
     redirect: { name: "dashboard" },
     children: [
