@@ -12,6 +12,7 @@ const MenusPC = [
       { name: "Button 按钮", path: "/docs/components/Button" },
       { name: "Image 图片", path: "/docs/components/Image" },
       { name: "CheckBox 复选框", path: "/docs/components/CheckBox" },
+      { name: "CheckBox 复选框组", path: "/docs/components/CheckBoxGroup" },
     ],
   },
 ];

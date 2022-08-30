@@ -2,8 +2,9 @@
 import UkuButton from "./Button";
 import UkuImage from "./Image";
 import UkuCheckBox from "./CheckBox";
+import UkuCheckBoxGroup from "./CheckBoxGroup";
 
-const components = [UkuButton, UkuImage, UkuCheckBox];
+const components = [UkuButton, UkuImage, UkuCheckBox, UkuCheckBoxGroup];
 
 const install = function (Vue) {
   // 判断是否安装

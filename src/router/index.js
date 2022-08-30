@@ -7,6 +7,7 @@ import QuickStart from "../../docs/QuickStart.md";
 import ButtonDocs from "../../docs/Button.md";
 import ImageDocs from "../../docs/Image.md";
 import CheckBoxDocs from "../../docs/CheckBox.md";
+import CheckBoxGroupDocs from "../../docs/CheckBoxGroup.md";
 
 // 示例
 import ExampleHome from "../../examples/Home.vue";
@@ -14,6 +15,7 @@ import ExampleMain from "../../examples/Main.vue";
 import Button from "../../examples/Button.vue";
 import Image from "../../examples/Image.vue";
 import CheckBox from "../../examples/CheckBox.vue";
+import CheckBoxGroup from "../../examples/CheckBoxGroup.vue";
 
 const routes = [
   { path: "/", redirect: { name: "docs" } },
@@ -28,6 +30,7 @@ const routes = [
       { path: "components/Button", meta: { name: "Button 按钮" }, component: ButtonDocs },
       { path: "components/Image", meta: { name: "Image 图片" }, component: ImageDocs },
       { path: "components/CheckBox", meta: { name: "CheckBox 复选框" }, component: CheckBoxDocs },
+      { path: "components/CheckBoxGroup", meta: { name: "CheckBoxGroup 复选框组" }, component: CheckBoxGroupDocs },
     ],
   },
   {
@@ -45,6 +48,7 @@ const routes = [
           { path: "Button", name: "button", component: Button },
           { path: "Image", name: "image", component: Image },
           { path: "CheckBox", name: "check-box", component: CheckBox },
+          { path: "CheckBoxGroup", name: "check-box-group", component: CheckBoxGroup },
         ],
       },
     ],

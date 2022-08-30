@@ -8,10 +8,10 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { UkuCheckBox } from 'uku-vue3';
+import { UkuCheckbox } from 'uku-vue3';
 
 const app = createApp();
-app.use(UkuCheckBox);
+app.use(UkuCheckbox);
 ```
 
 ## 代码演示

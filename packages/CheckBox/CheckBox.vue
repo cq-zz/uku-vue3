@@ -4,7 +4,7 @@
     type="checkbox"
     :disabled="disabled"
     :checked="checked"
-    @change="event => $emit('change', event)" />
+    @change="$emit('change', $event)" />
 </template>
 <script>
 import { defineComponent } from "vue";
