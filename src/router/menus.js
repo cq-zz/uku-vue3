@@ -7,10 +7,11 @@ const MenusPC = [
     ],
   },
   {
-    title: "基础组件",
+    title: "组件",
     children: [
       { name: "Button 按钮", path: "/docs/components/Button" },
       { name: "Image 图片", path: "/docs/components/Image" },
+      { name: "CheckBox 复选框", path: "/docs/components/CheckBox" },
     ],
   },
 ];

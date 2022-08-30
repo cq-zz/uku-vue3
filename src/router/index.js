@@ -6,12 +6,14 @@ import DocsHome from "../../docs/Home.md";
 import QuickStart from "../../docs/QuickStart.md";
 import ButtonDocs from "../../docs/Button.md";
 import ImageDocs from "../../docs/Image.md";
+import CheckBoxDocs from "../../docs/CheckBox.md";
 
 // 示例
 import ExampleHome from "../../examples/Home.vue";
 import ExampleMain from "../../examples/Main.vue";
 import Button from "../../examples/Button.vue";
 import Image from "../../examples/Image.vue";
+import CheckBox from "../../examples/CheckBox.vue";
 
 const routes = [
   { path: "/", redirect: { name: "docs" } },
@@ -25,6 +27,7 @@ const routes = [
       { path: "start", meta: { name: "快速上手" }, component: QuickStart },
       { path: "components/Button", meta: { name: "Button 按钮" }, component: ButtonDocs },
       { path: "components/Image", meta: { name: "Image 图片" }, component: ImageDocs },
+      { path: "components/CheckBox", meta: { name: "CheckBox 复选框" }, component: CheckBoxDocs },
     ],
   },
   {
@@ -41,6 +44,7 @@ const routes = [
         children: [
           { path: "Button", name: "button", component: Button },
           { path: "Image", name: "image", component: Image },
+          { path: "CheckBox", name: "check-box", component: CheckBox },
         ],
       },
     ],

@@ -1,8 +1,9 @@
 /* eslint-disable valid-typeof */
 import UkuButton from "./Button";
 import UkuImage from "./Image";
+import UkuCheckBox from "./CheckBox";
 
-const components = [UkuButton, UkuImage];
+const components = [UkuButton, UkuImage, UkuCheckBox];
 
 const install = function (Vue) {
   // 判断是否安装

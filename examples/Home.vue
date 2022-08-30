@@ -4,6 +4,7 @@ import { ref } from "vue";
 const menus = ref([
   { cn: "按钮", en: "Button", path: "components/Button" },
   { cn: "图片", en: "Image", path: "components/Image" },
+  { cn: "复选框", en: "CheckBox", path: "components/CheckBox" },
 ]);
 
 const goRoute = item => {
