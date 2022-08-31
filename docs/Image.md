@@ -8,10 +8,10 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { UkuImage } from 'uku-vue3';
+import { Image } from 'uku-vue3';
 
 const app = createApp();
-app.use(UkuImage);
+app.use(Image);
 ```
 
 ## 代码演示

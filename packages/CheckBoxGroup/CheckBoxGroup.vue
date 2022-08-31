@@ -20,7 +20,7 @@
 <script>
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "UkuCheckboxgroup",
+  name: "UkuCheckboxGroup",
   props: {
     data: {
       type: Array,

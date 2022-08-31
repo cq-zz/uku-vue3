@@ -8,10 +8,10 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { UkuCheckboxgroup } from 'uku-vue3';
+import { CheckboxGroup } from 'uku-vue3';
 
 const app = createApp();
-app.use(UkuCheckboxgroup);
+app.use(CheckboxGroup);
 ```
 
 ## 代码演示
@@ -19,7 +19,7 @@ app.use(UkuCheckboxgroup);
 ### 默认用法
 
 ```html
-<uku-checkboxgroup :data="data1"></uku-checkboxgroup>
+<uku-checkbox-group :data="data1"></uku-checkbox-group>
 ```
 ```javascript
 import { ref } from "vue";
@@ -44,7 +44,7 @@ export default {
 通过 `change` 。
 
 ```html
-<uku-checkboxgroup :data="data2" @change="checkboxgroupChange"></uku-checkboxgroup>
+<uku-checkbox-group :data="data2" @change="checkboxgroupChange"></uku-checkbox-group>
 ```
 ```javascript
 import { ref } from "vue";
@@ -73,7 +73,7 @@ export default {
 通过 `disabled` 属性将按钮设置为禁用状态
 
 ```html
-<uku-checkboxgroup :inline="true" :data="data3"></uku-checkboxgroup>
+<uku-checkbox-group :inline="true" :data="data3"></uku-checkbox-group>
 ```
 ```javascript
 import { ref } from "vue";

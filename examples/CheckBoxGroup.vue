@@ -37,19 +37,19 @@ export default {
   <div class="block-checkboxgroup-div">
     <p>默认用法</p>
     <div>
-      <uku-checkboxgroup :data="data1"></uku-checkboxgroup>
+      <uku-checkbox-group :data="data1"></uku-checkbox-group>
     </div>
   </div>
   <div class="block-checkboxgroup-div">
     <p>回调事件</p>
     <div>
-      <uku-checkboxgroup :data="data2" @change="checkboxgroupChange"></uku-checkboxgroup>
+      <uku-checkbox-group :data="data2" @change="checkboxgroupChange"></uku-checkbox-group>
     </div>
   </div>
   <div class="block-checkboxgroup-div">
     <p>禁用选项</p>
     <div>
-      <uku-checkboxgroup :inline="true" :data="data3"></uku-checkboxgroup>
+      <uku-checkbox-group :inline="true" :data="data3"></uku-checkbox-group>
     </div>
   </div>
 </template>

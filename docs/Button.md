@@ -8,10 +8,10 @@
 
 ```javascript
 import { createApp } from 'vue';
-import { UkuButton } from 'uku-vue3';
+import { Button } from 'uku-vue3';
 
 const app = createApp();
-app.use(UkuButton);
+app.use(Button);
 ```
 
 ## 代码演示
